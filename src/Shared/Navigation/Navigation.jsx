@@ -17,7 +17,7 @@ const Navigation = () => {
     </>
   );
   return (
-    <div className="bg-[#a0cfe3]">
+    <div className="bg-white">
       <div className="container mx-auto">
         <div className="navbar py-8">
           <div className="navbar-start">
