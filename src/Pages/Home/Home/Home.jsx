@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import Cta from "../CTA/Cta";
 import Categories from "../Categories/Categories";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Banner />
       <Categories />
+      <Cta/>
     </div>
   );
 };
