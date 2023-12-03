@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo-1.png";
 import LoggedIn from "../../components/LoggedIn/LoggedIn";
 import LoggedOut from "../../components/LoggedOut/LoggedOut";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Navigation = () => {
+  const { user } = useContext(AuthContext);
   const menuItem = (
     <>
       <li>
@@ -55,8 +58,7 @@ const Navigation = () => {
           </div>
 
           <div className="navbar-end">
-            <LoggedIn />
-             <LoggedOut />
+            {user ? <LoggedIn /> : <LoggedOut />}
           </div>
         </div>
       </div>

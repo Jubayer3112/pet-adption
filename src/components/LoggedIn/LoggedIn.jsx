@@ -1,4 +1,15 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+
 const LoggedIn = () => {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+  const handleSignOut = () => {
+    logOut()
+      .then(() => console.log("logged out"))
+      .catch((error) => console.log(error));
+  };
   return (
     <div>
       <div className="dropdown dropdown-end">
@@ -8,18 +19,15 @@ const LoggedIn = () => {
           className="btn btn-ghost btn-circle avatar"
         >
           <div className="w-10 rounded-full">
-            <img
-              alt="Tailwind CSS Navbar component"
-              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-            />
+            <img src={user.photoURL} />
           </div>
         </div>
         <ul className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
           <li>
             <a className="justify-between">Dashboard</a>
           </li>
-          <li>
-            <a>Logout</a>
+          <li onClick={handleSignOut}>
+            <Link>Logout</Link>
           </li>
         </ul>
       </div>
