@@ -1,6 +1,11 @@
+import { useLoaderData } from "react-router-dom";
+import ListingCard from "./ListingCard";
+
 const PetListing = () => {
+  const pets = useLoaderData();
+  console.log(pets);
   return (
-    <div>
+    <div className="">
       <div
         className="hero h-[60vh]"
         style={{
@@ -15,7 +20,19 @@ const PetListing = () => {
           </div>
         </div>
       </div>
-      <h1>All pet here</h1>
+
+
+      <div className="container mx-auto">
+        <h1>All pet here:{pets.length}</h1>
+        <div className="grid grid-cols-3 gap-7">
+          {pets.map((pet) => (
+            <ListingCard key={pet._id} pet={pet} />
+          ))}
+        </div>
+      </div>
+
+
+      
     </div>
   );
 };
