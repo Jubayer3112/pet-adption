@@ -9,7 +9,7 @@ const AddPet = () => {
     const PetAge = form.PetAge.value;
     const PetCategory = form.PetCategory.value;
     const petlocation = form.petlocation.value;
-    const LongDescription = form.LongDescription.value
+    const LongDescription = form.LongDescription.value;
     const newPet = {
       PetImg,
       PetName,
@@ -21,7 +21,7 @@ const AddPet = () => {
 
     console.log(newPet);
 
-    fetch("http://localhost:5000/pets", {
+    fetch("https://pet-adoption-server-dlurtrqef-jubayer3112.vercel.app/pets", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -80,8 +80,6 @@ const AddPet = () => {
                   required
                 />
               </div>
-
-
 
               <div className="form-control">
                 <label className="label">
