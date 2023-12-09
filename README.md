@@ -47,4 +47,4 @@
 
 1. Clone the repository.
    ```bash
-   git clone https://github.com/Jubayer3112/pet-adoption.git
+   git clone https://github.com/Jubayer3112/pet-adption.git
