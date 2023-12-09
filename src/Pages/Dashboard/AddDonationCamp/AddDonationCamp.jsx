@@ -15,16 +15,13 @@ const AddDonationCamp = () => {
 
     console.log(newPet);
 
-    fetch(
-      "https://pet-adoption-server-dlurtrqef-jubayer3112.vercel.app/addcampaign",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newPet),
-      }
-    )
+    fetch("https://pet-adoption-server-snowy.vercel.app/addcampaign", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newPet),
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

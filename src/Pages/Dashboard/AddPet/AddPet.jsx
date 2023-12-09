@@ -21,7 +21,7 @@ const AddPet = () => {
 
     console.log(newPet);
 
-    fetch("https://pet-adoption-server-dlurtrqef-jubayer3112.vercel.app/pets", {
+    fetch("https://pet-adoption-server-snowy.vercel.app/pets", {
       method: "POST",
       headers: {
         "content-type": "application/json",

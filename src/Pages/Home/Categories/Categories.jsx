@@ -5,9 +5,7 @@ const Categories = () => {
   const [categories, setCaegories] = useState([]);
   console.log(categories);
   useEffect(() => {
-    fetch(
-      "https://pet-adoption-server-dlurtrqef-jubayer3112.vercel.app/petcategory"
-    )
+    fetch("https://pet-adoption-server-snowy.vercel.app/petcategory")
       .then((res) => res.json())
       .then((data) => setCaegories(data));
   }, []);

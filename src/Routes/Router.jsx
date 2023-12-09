@@ -26,17 +26,13 @@ const Router = createBrowserRouter([
         path: "/listing",
         element: <PetListing />,
         loader: () =>
-          fetch(
-            "https://pet-adoption-server-dlurtrqef-jubayer3112.vercel.app/pets"
-          ),
+          fetch("https://pet-adoption-server-snowy.vercel.app/pets"),
       },
       {
         path: "/donation",
         element: <DonationCamp />,
         loader: () =>
-          fetch(
-            "https://pet-adoption-server-dlurtrqef-jubayer3112.vercel.app/addcampaign"
-          ),
+          fetch("https://pet-adoption-server-snowy.vercel.app/addcampaign"),
       },
       {
         path: "/login",
